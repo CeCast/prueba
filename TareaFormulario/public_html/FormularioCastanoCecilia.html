@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+
+<html Lang = "es">
+    <head>
+        <title>	Registro </title>
+        <link type="text/css" rel="stylesheet" href="estilo.css">
+
+    </head>
+    <body>
+
+        <form action="newhtml.html" >
+            <header>
+                <h1><b>REGISTRO</b>               
+                <img src="imagenes/papelYlapiz.jpg" alt=""/> </h1>
+                <h4>Complete el siguiente formulario</h4>
+                <small>(*)campos obligatorios</small>
+            </header>
+            <section>
+                <article id= "datos_personales">
+                    <h4>DATOS PERSONALES</h4>
+                    <i>(*)Nombre: </i>
+                    <input name="nombre" id="form_nombre" type="text" required pattern="[A-Za-z, ]{1,25}">
+                    <br>
+                    <i>(*)Apellido: </i>
+                    <input name="apellido" id="form_apellido" type="text" required pattern="[A-Za-z, ,&#241;]{1,25}">
+                    <br>
+                    <i>(*)DNI: </i>
+                    <input name="dni" id="form_dni" type="text" required pattern="[0-9]{8}">
+                    <br>
+                    <i>Fecha de Nacimiento: </i>
+                    <input name="fechanac" id="form_fechanac" type="date">
+                    <br>
+                    <datalist id="informacion"> 
+                        <option value="Casado">  
+                        <option value="Soltero"> 
+                        <option value="Divorciado">  
+                        <option value="Viudo"> 
+                    </datalist> 
+                    <i>Estado civil: </i>
+                    <input type="text" name="estadoC" id="estadoCivil" list="informacion">
+                    <br>
+                    <i>Sexo: </i>
+                    <input value="M" name="sexo" id="form_masculino" type="radio"> Masculino
+                    <input value="F" name="sexo" id="form_femenino" type="radio"> Femenino
+                    <br> 
+                    <i>Foto: </i>
+                    <input name="foto"  id="form_foto" type="file" multiple >         
+                </article>
+
+                <article id="Datos_Contacto">
+                    <h4>DATOS CONTACTO</h4>
+                    <i>(*)Domicilio: </i>
+                    <input name="Domicilio" id="form_domicilio" type="text" required pattern="[A-Za-z, ,0-9]{1,25}">
+                    <br>
+                    <i>(*)Codigo Postal: </i>
+                    <input name="cpostal" id="form_cp" type="text" required pattern="[0-9]{4}">
+                    <br>
+                    <i>(*)Telefono: </i>
+                    <input name="Telefono" id="form_telefono" type="tel" required>
+                    <br>
+                    <i>Email: </i>
+                    <input name="Email" id="form_email" type="email" >
+                    <br>
+                </article>
+                <br><input type="submit" value="Enviar" name="enviar">
+            </section>
+        </form>
+        <footer>
+        &#169; Copyright Cecilia Casta&#241;o
+            <address>            
+                Contacto: <a>info@misitio.com</a>
+            </address>
+        </footer>
+    </body>
+</html>
